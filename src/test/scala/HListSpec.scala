@@ -12,9 +12,8 @@ class HListSpec extends FlatSpec with Matchers with TypeLevelMagic {
   }
 
   "Natural numbers" should "allow basic matching against zero or non-zero" in {
-    type Const7[_] = _7
-    areEqual[_0#Match[_6, Const7, Natural], _6] should be (true)
-    areEqual[_1#Match[_6, Const7, Natural], _7] should be (true)
+    areEqual[_0#Match[_6, ({type λ[_] = _7})#λ, Natural], _6] should be (true)
+    areEqual[_1#Match[_6, ({type λ[_] = _7})#λ, Natural], _7] should be (true)
   }
 
   "HNil" should "raise exception if head or tail called" in {
