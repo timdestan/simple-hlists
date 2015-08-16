@@ -30,7 +30,7 @@ class HListSpec extends FlatSpec with Matchers with TypeLevelMagic {
     ("foo" :: 7 :: HNil).tail.head should be (7)
   }
 
-  "append" should "append to HLists together" in {
+  "append" should "append two HLists together" in {
     val appended = ("foo" :: false :: HNil) ++ (7 :: 3.14 :: HNil)
     appended.tail.tail.head should be (7)
   }
