@@ -28,7 +28,7 @@ sealed trait _0 extends Natural {
 }
 
 sealed trait Successor[N <: Natural] extends Natural {
-    type Match[IfZero <: Up, IfNonZero[N <: Natural] <: Up, Up] = IfNonZero[N]
+  type Match[IfZero <: Up, IfNonZero[N <: Natural] <: Up, Up] = IfNonZero[N]
 }
 
 type _1 = Successor[_0]
